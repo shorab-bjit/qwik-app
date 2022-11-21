@@ -7,7 +7,7 @@ export const SynchronousEvents = component$(() => {
 
   return (
     <div>
-      <h5>Example of Synchronous Events</h5>
+      <h2>Example of Synchronous Events</h2>
       {/* 
       this is asynchronous call example
         <a href="/" onClick$={() => window.open("http://qwik.builder.io")}>

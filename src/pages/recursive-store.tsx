@@ -5,7 +5,7 @@ export const RecursiveStore = component$(() => {
   //! here we add {recursive: true} so it will work recursively
   return (
     <>
-      <h5>Example of recursive store</h5>
+      <h2>Example of recursive store</h2>
       <Display counter={store.counter} />
       <button onClick$={() => store.counter.count++}>+1</button>
       <hr />

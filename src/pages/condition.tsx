@@ -20,7 +20,7 @@ export const ConditionUses = component$(() => {
 
   return (
     <div>
-      <h4>Show data conditionally</h4>
+      <h2>Show data conditionally</h2>
 
       <div>
         <span>

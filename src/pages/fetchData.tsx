@@ -21,7 +21,7 @@ export const FetchData = component$(() => {
 
   return (
     <div>
-      <h4>Fetching Resource on state change</h4>
+      <h2>Fetching Resource on state change</h2>
       <div>
         <span>
           GitHub username:

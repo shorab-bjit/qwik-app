@@ -19,7 +19,7 @@ export const ConditionalListeners = component$(() => {
 
   return (
     <div>
-      <h5>Example of Conditional Listeners</h5>
+      <h2>Example of Conditional Listeners</h2>
       <p>App Component. Click me.</p>
       <hr />
     </div>

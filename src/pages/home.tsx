@@ -39,7 +39,7 @@ export const Home = component$(() => {
 
   return (
     <div>
-      <h5>Example of uses reuse component</h5>
+      <h2>Example of uses reuse component</h2>
       <Input userData={state} />
       <p>User Name: {state.userName}</p>
       <Button onClick$={handleClick$} />
