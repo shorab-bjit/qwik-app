@@ -11,6 +11,11 @@ interface CounterState {
   debounced: number;
 }
 
+type TextProps = {
+  createdAt: string;
+  updatedAt: string;
+};
+
 export const Home = component$(() => {
   const state = useStore<UserState>({
     userName: "",
@@ -25,15 +30,30 @@ export const Home = component$(() => {
     counter.count++;
   });
 
+  const text = [
+    {
+      createdAt: "2020-10-12",
+      updatedAt: "2020-11-11",
+    },
+  ];
+
   return (
     <div>
       <h5>Example of uses reuse component</h5>
       <Input userData={state} />
       <p>User Name: {state.userName}</p>
-
       <Button onClick$={handleClick$} />
       <p>Button Click: {counter.count}</p>
       <p>Debounce Value: {counter.debounced}</p>
+
+      {text.map((item: TextProps, index) => {
+        return (
+          <div key={index}>
+            <p>Created At: {item.createdAt}</p>
+            <p>updated At: {item.updatedAt}</p>
+          </div>
+        );
+      })}
       <hr />
     </div>
   );
