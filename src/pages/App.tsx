@@ -7,6 +7,7 @@ import { RecursiveStore } from "~/pages/recursive-store";
 import { Serialization } from "~/pages/Serialization";
 import { Serialization2 } from "~/pages/Serialization2";
 import { ConditionUses } from "~/pages/condition";
+import { UsingContext } from "~/pages/using-context";
 import { FetchData } from "~/pages/fetchData";
 
 export const App = component$(() => {
@@ -20,6 +21,7 @@ export const App = component$(() => {
       <Serialization />
       <Serialization2 />
       <ConditionUses />
+      <UsingContext />
       <FetchData />
     </div>
   );
