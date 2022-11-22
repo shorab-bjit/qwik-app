@@ -8,6 +8,7 @@ import { Serialization } from "~/pages/Serialization";
 import { Serialization2 } from "~/pages/Serialization2";
 import { ConditionUses } from "~/pages/condition";
 import { UsingContext } from "~/pages/using-context";
+import { UseMountHooks } from "~/pages/use-mount";
 import { FetchData } from "~/pages/fetchData";
 
 export const App = component$(() => {
@@ -22,6 +23,7 @@ export const App = component$(() => {
       <Serialization2 />
       <ConditionUses />
       <UsingContext />
+      <UseMountHooks />
       <FetchData />
     </div>
   );
