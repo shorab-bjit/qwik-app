@@ -1,4 +1,4 @@
-import { component$, $, useStore } from "@builder.io/qwik";
+import { component$, $, useStore, useWatch$ } from "@builder.io/qwik";
 import { Input } from "~/components/input";
 import { Button } from "~/components/button";
 
@@ -28,6 +28,18 @@ export const Home = component$(() => {
 
   const handleClick$ = $(() => {
     counter.count++;
+  });
+
+  useWatch$(({ track }) => {
+    // track changes in store.count
+    track(() => counter.count);
+
+    const timer = setTimeout(() => {
+      counter.debounced = counter.count;
+    }, 2000);
+    return () => {
+      clearTimeout(timer);
+    };
   });
 
   const text = [

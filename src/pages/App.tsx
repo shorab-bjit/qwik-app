@@ -6,6 +6,7 @@ import { RecursiveStore } from "~/pages/recursive-store";
 import { SynchronousEvents } from "~/pages/synchronous-enent";
 import { ConditionalListeners } from "~/pages/conditional-listeners";
 import { Serialization } from "~/pages/Serialization";
+import { Serialization2 } from "~/pages/Serialization2";
 
 export const App = component$(() => {
   return (
@@ -15,6 +16,7 @@ export const App = component$(() => {
       <ConditionalListeners />
       <RecursiveStore />
       <Serialization />
+      <Serialization2 />
       <ConditionUses />
       <FetchData />
     </div>
