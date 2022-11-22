@@ -1,17 +1,19 @@
 import { component$ } from "@builder.io/qwik";
 import { Home } from "~/pages/home";
-import { FetchData } from "~/pages/fetchData";
-import { ConditionUses } from "~/pages/condition";
-import { RecursiveStore } from "~/pages/recursive-store";
+import { PassingStore } from "~/pages/passing-store";
 import { SynchronousEvents } from "~/pages/synchronous-enent";
 import { ConditionalListeners } from "~/pages/conditional-listeners";
+import { RecursiveStore } from "~/pages/recursive-store";
 import { Serialization } from "~/pages/Serialization";
 import { Serialization2 } from "~/pages/Serialization2";
+import { ConditionUses } from "~/pages/condition";
+import { FetchData } from "~/pages/fetchData";
 
 export const App = component$(() => {
   return (
     <div>
       <Home />
+      <PassingStore />
       <SynchronousEvents />
       <ConditionalListeners />
       <RecursiveStore />
