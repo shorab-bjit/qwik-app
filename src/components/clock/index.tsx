@@ -1,10 +1,10 @@
 import {
   component$,
   useStore,
-  useStyles$,
+  useStylesScoped$,
   useClientEffect$,
 } from "@builder.io/qwik";
-import styles from "./index.css";
+import styles from "./index.scss?inline";
 
 interface ClockStore {
   hour: number;
@@ -12,7 +12,7 @@ interface ClockStore {
   second: number;
 }
 export const Clock = component$(() => {
-  useStyles$(styles);
+  useStylesScoped$(styles);
 
   const store = useStore<ClockStore>({
     hour: 0,

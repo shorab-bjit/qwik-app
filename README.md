@@ -64,3 +64,20 @@ The production build will generate client and server modules by running both cli
 ```shell
 npm run build # or `yarn build`
 ```
+
+Hi there, I have scss running normally
+
+npm add -D sass
+import the scss file with '?inline'
+useStylesScoped$(styles);
+example: in your component
+
+```
+import { component$, useStylesScoped$ } from '@builder.io/qwik';
+import styles from './your-file.scss?inline';
+
+export default component$(() => {
+    useStylesScoped$(styles);
+    return <h1>H1 tag</h1>
+}
+```
