@@ -1,4 +1,5 @@
 import { component$, useStore } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 
 interface GithubStore {
   org: string;
@@ -10,7 +11,7 @@ interface Coordinate {
   y: number;
 }
 
-export const ConditionUses = component$(() => {
+export default component$(() => {
   const tempData = useStore<GithubStore>({
     org: "BuilderIO",
     repos: ["qwik", "partytown"] as string[] | null,
@@ -58,6 +59,10 @@ export const ConditionUses = component$(() => {
         Your mouse location is ({coordinate.x}, {coordinate.y}).
       </div>
       <hr />
+
+      <Link class="mindblow" href="/use-watch/">
+        View Example of use-watch 🤯
+      </Link>
     </div>
   );
 });

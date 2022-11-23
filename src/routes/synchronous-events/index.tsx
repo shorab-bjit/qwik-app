@@ -1,6 +1,7 @@
 import { component$, useClientEffect$ } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 
-export const SynchronousEvents = component$(() => {
+export default component$(() => {
   const openNewWindow = useClientEffect$(() => {
     window.open("http://qwik.builder.io");
   });
@@ -20,6 +21,10 @@ export const SynchronousEvents = component$(() => {
         click me!
       </a>
       <hr />
+
+      <Link class="mindblow" href="/conditional-listeners/">
+        View Example of ConditionalListeners 🤯
+      </Link>
     </div>
   );
 });

@@ -6,13 +6,14 @@ import {
   $,
   useStore,
 } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 
 interface AppStore {
   time: null | string;
   timerId: any;
   cleanup: QRL<(id: number) => void>;
 }
-export const Serialization2 = component$(() => {
+export default component$(() => {
   const store = useStore<AppStore>({
     time: null,
     timerId: null,
@@ -45,6 +46,10 @@ export const Serialization2 = component$(() => {
       </button>
 
       <hr />
+
+      <Link class="mindblow" href="/no-serialization/">
+        View Example of no Serialization 🤯
+      </Link>
     </div>
   );
 });

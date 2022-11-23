@@ -1,6 +1,7 @@
 import { component$, useServerMount$, useStore } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 
-export const UseMountHooks = component$(() => {
+export default component$(() => {
   const github = useStore({
     org: "BuilderIO",
     repos: null as string[] | null,
@@ -48,6 +49,10 @@ export const UseMountHooks = component$(() => {
         )}
       </div>
       <hr />
+
+      <Link class="mindblow" href="/use-clientEffect/">
+        View Example of use-clientEffect 🤯
+      </Link>
     </div>
   );
 });

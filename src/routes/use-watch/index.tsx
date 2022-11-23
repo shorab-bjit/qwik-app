@@ -1,6 +1,7 @@
 import { component$, useWatch$, useStore } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 
-export const UseWatch = component$(() => {
+export default component$(() => {
   const store = useStore({
     value: "",
     debouncedValue: "",
@@ -19,7 +20,7 @@ export const UseWatch = component$(() => {
       clearTimeout(timer);
     };
   });
-  
+
   return (
     <div>
       <h2>Example of useWatch hooks</h2>
@@ -34,6 +35,10 @@ export const UseWatch = component$(() => {
       <br />
       Debounced value: {store.debouncedValue}
       <hr />
+
+      <Link class="mindblow" href="/use-mount/">
+        View Example of use-mount 🤯
+      </Link>
     </div>
   );
 });

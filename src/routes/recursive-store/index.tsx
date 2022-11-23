@@ -1,6 +1,7 @@
 import { component$, useStore } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 
-export const RecursiveStore = component$(() => {
+export default component$(() => {
   const store = useStore({ counter: { count: 0 } }, { recursive: true });
   //! here we add {recursive: true} so it will work recursively
   return (
@@ -9,6 +10,10 @@ export const RecursiveStore = component$(() => {
       <Display counter={store.counter} />
       <button onClick$={() => store.counter.count++}>+1</button>
       <hr />
+
+      <Link class="mindblow" href="/serialization/">
+        View Example of Serialization 🤯
+      </Link>
     </>
   );
 });

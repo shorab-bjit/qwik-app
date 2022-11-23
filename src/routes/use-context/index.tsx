@@ -5,6 +5,7 @@ import {
   useContextProvider,
   useStore,
 } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 
 interface TodoStore {
   items: string[];
@@ -17,7 +18,7 @@ interface CountStore {
 export const TodoContext = createContext<TodoStore>("Todo");
 export const CountContext = createContext<CountStore>("Counts");
 
-export const UsingContext = component$(() => {
+export default component$(() => {
   const todoStore = useStore<TodoStore>({
     items: ["Learn Qwik", "Build Qwik app", "Profit"],
   });
@@ -35,6 +36,10 @@ export const UsingContext = component$(() => {
       <div>Count: {countStore.count}</div>
       <Items />
       <hr />
+
+      <Link class="mindblow" href="/fetch-data/">
+        View Example of no Fetch Data 🤯
+      </Link>
     </div>
   );
 });

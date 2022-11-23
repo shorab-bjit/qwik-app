@@ -1,4 +1,5 @@
 import { component$, useStore, QRL, $ } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 
 interface ParentStore {
   name: string;
@@ -10,7 +11,7 @@ interface ChildStore {
   parent: ParentStore;
 }
 
-export const Serialization = component$(() => {
+export default component$(() => {
   const parent: ParentStore = {
     name: "test from parent store",
     children: [],
@@ -64,8 +65,11 @@ export const Serialization = component$(() => {
           </li>
         ))}
       </ul>
-
       <hr/>
+
+      <Link class="mindblow" href="/serialization2/">
+        View Example of Serialization 2 🤯
+      </Link>
     </div>
   );
 });

@@ -4,13 +4,14 @@ import {
   NoSerialize,
   useStore,
 } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 
 interface AppStore {
   time: null | string;
   id: any;
   cleanup: NoSerialize<(id: number) => void>;
 }
-export const NoSerializeComponent = component$(() => {
+export default component$(() => {
   const store = useStore<AppStore>({
     time: null,
     id: null,
@@ -45,6 +46,10 @@ export const NoSerializeComponent = component$(() => {
       </button>
 
       <hr />
+
+      <Link class="mindblow" href="/condition-uses/">
+        View Example of ConditionUses 🤯
+      </Link>
     </div>
   );
 });

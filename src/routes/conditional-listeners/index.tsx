@@ -1,6 +1,7 @@
 import { component$, $, useOn } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 
-export const ConditionalListeners = component$(() => {
+export default component$(() => {
   
   useOn(
     "click",
@@ -22,6 +23,10 @@ export const ConditionalListeners = component$(() => {
       <h2>Example of Conditional Listeners</h2>
       <p>App Component. Click me.</p>
       <hr />
+
+      <Link class="mindblow" href="/recursive-store/">
+        View Example of RecursiveStore 🤯
+      </Link>
     </div>
   );
 });

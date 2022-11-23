@@ -1,9 +1,10 @@
 import { component$, useStore } from "@builder.io/qwik";
+import { DocumentHead, Link } from "@builder.io/qwik-city";
 
 interface CountStore {
   count: number;
 }
-export const PassingStore = component$(() => {
+export default component$(() => {
   const store = useStore<CountStore>({ count: 0 });
 
   return (
@@ -18,6 +19,10 @@ export const PassingStore = component$(() => {
       <button onClick$={() => store.count++}>+1</button>
       <Display state={store} />
       <hr />
+
+      <Link class="mindblow" href="/synchronous-events/">
+        View Example of SynchronousEvents 🤯
+      </Link>
     </div>
   );
 });
@@ -25,6 +30,13 @@ export const PassingStore = component$(() => {
 interface DisplayProps {
   count: number;
 }
+
 export const Display = component$((props: { state: DisplayProps }) => {
   return <div>The count is: {props.state.count}</div>;
 });
+
+
+export const head: DocumentHead = {
+    title: "Example of passing store",
+  };
+  

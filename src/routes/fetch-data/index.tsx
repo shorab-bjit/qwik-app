@@ -5,7 +5,7 @@ interface GithubStore {
   org: string;
 }
 
-export const FetchData = component$(() => {
+export default component$(() => {
   const tempData = useStore<GithubStore>({
     org: "BuilderIO",
   });
@@ -52,7 +52,7 @@ export const FetchData = component$(() => {
           />
         </div>
       </div>
-      <hr/>
+      <hr />
     </div>
   );
 });

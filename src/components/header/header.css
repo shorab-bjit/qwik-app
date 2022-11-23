@@ -4,6 +4,23 @@ header {
   border-bottom: 10px solid var(--qwik-dark-purple);
 }
 
+.router {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.router-item {
+  text-decoration: none;
+  font-size: 18px;
+  border: 1px solid gray;
+  margin-left: 1rem;
+  border-radius: 5px;
+  background-color: rgb(173, 131, 214);
+  color: white !important;
+}
+
 header .logo a {
   display: inline-block;
   padding: 10px 10px 7px 20px;
