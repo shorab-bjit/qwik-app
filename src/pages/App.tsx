@@ -10,7 +10,8 @@ import { ConditionUses } from "~/pages/condition";
 import { UsingContext } from "~/pages/using-context";
 import { UseMountHooks } from "~/pages/use-mount";
 import { FetchData } from "~/pages/fetchData";
-import {NoSerializeComponent} from "~/pages/no-serialization";
+import { NoSerializeComponent } from "~/pages/no-serialization";
+import { ClientEffect } from "~/components/clock";
 
 export const App = component$(() => {
   return (
@@ -22,10 +23,11 @@ export const App = component$(() => {
       <RecursiveStore />
       <Serialization />
       <Serialization2 />
-      <NoSerializeComponent/>
+      <NoSerializeComponent />
       <ConditionUses />
       <UsingContext />
       <UseMountHooks />
+      <ClientEffect />
       <FetchData />
     </div>
   );
