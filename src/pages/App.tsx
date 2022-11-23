@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import { Home } from "~/pages/home";
 import { PassingStore } from "~/pages/passing-store";
-import { SynchronousEvents } from "~/pages/synchronous-enent";
+import { SynchronousEvents } from "~/pages/synchronous-event";
 import { ConditionalListeners } from "~/pages/conditional-listeners";
 import { RecursiveStore } from "~/pages/recursive-store";
 import { Serialization } from "~/pages/Serialization";
