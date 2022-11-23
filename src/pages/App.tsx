@@ -10,6 +10,7 @@ import { ConditionUses } from "~/pages/condition";
 import { UsingContext } from "~/pages/using-context";
 import { UseMountHooks } from "~/pages/use-mount";
 import { FetchData } from "~/pages/fetchData";
+import {NoSerializeComponent} from "~/pages/no-serialization";
 
 export const App = component$(() => {
   return (
@@ -21,6 +22,7 @@ export const App = component$(() => {
       <RecursiveStore />
       <Serialization />
       <Serialization2 />
+      <NoSerializeComponent/>
       <ConditionUses />
       <UsingContext />
       <UseMountHooks />
