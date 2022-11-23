@@ -9,6 +9,7 @@ import { Serialization2 } from "~/pages/Serialization2";
 import { ConditionUses } from "~/pages/condition";
 import { UsingContext } from "~/pages/using-context";
 import { UseMountHooks } from "~/pages/use-mount";
+import { UseWatch } from "~/pages/use-watch";
 import { FetchData } from "~/pages/fetchData";
 import { NoSerializeComponent } from "~/pages/no-serialization";
 import { ClientEffect } from "~/components/clock";
@@ -25,9 +26,10 @@ export const App = component$(() => {
       <Serialization2 />
       <NoSerializeComponent />
       <ConditionUses />
-      <UsingContext />
+      <UseWatch />
       <UseMountHooks />
       <ClientEffect />
+      <UsingContext />
       <FetchData />
     </div>
   );
