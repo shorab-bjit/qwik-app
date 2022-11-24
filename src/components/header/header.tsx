@@ -20,12 +20,13 @@ export default component$(() => {
     "use-clientEffect",
     "use-context",
     "fetch-data",
+    "auto-complete",
   ];
 
   return (
     <header>
       <div class="logo">
-        <Link class='home' href="/">
+        <Link class="home" href="/">
           <QwikLogo />
         </Link>
 
