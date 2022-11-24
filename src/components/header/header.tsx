@@ -21,6 +21,7 @@ export default component$(() => {
     "use-context",
     "fetch-data",
     "auto-complete",
+    "use-style",
   ];
 
   return (
