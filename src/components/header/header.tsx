@@ -25,7 +25,7 @@ export default component$(() => {
   return (
     <header>
       <div class="logo">
-        <Link href="/">
+        <Link class='home' href="/">
           <QwikLogo />
         </Link>
 

@@ -4,6 +4,17 @@ header {
   border-bottom: 10px solid var(--qwik-dark-purple);
 }
 
+.home {
+  position: relative;
+}
+
+.home:hover::after {
+  position: absolute;
+  content: 'Go to home';
+  top: 45px;
+  left: 30px;
+}
+
 .router {
   display: flex;
   flex-wrap: wrap;
@@ -11,6 +22,7 @@ header {
   justify-content: center;
   align-items: center;
 }
+
 .router-item {
   text-decoration: none;
   font-size: 18px;

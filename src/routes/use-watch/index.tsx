@@ -1,7 +1,15 @@
-import { component$, useWatch$, useStore } from "@builder.io/qwik";
+import {
+  component$,
+  useWatch$,
+  useStore,
+  useStylesScoped$,
+} from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
+import styles from "./index.scss?inline";
 
 export default component$(() => {
+  useStylesScoped$(styles);
+
   const store = useStore({
     value: "",
     debouncedValue: "",
@@ -26,6 +34,7 @@ export default component$(() => {
       <h2>Example of useWatch hooks</h2>
       <input
         value={store.value}
+        placeholder='Please Enter..'
         onInput$={(event) =>
           (store.value = (event.target as HTMLInputElement).value)
         }
@@ -35,7 +44,6 @@ export default component$(() => {
       <br />
       Debounced value: {store.debouncedValue}
       <hr />
-
       <Link class="mindblow" href="/use-mount/">
         View Example of use-mount 🤯
       </Link>

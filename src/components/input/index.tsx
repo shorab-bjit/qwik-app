@@ -1,10 +1,12 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import styles from "./index.scss?inline";
 
 interface UserState {
   userName: string;
 }
 
 export const Input = component$((props: { userData: UserState }) => {
+  useStylesScoped$(styles);
 
   return (
     <div class="a-input">
