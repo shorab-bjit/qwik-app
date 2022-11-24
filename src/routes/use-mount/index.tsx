@@ -7,6 +7,7 @@ export default component$(() => {
     repos: null as string[] | null,
   });
 
+  //* It's use only server/api call purposes not on the client
   useServerMount$(async () => {
     // Put code here to fetch data from the server.
 
@@ -27,7 +28,12 @@ export default component$(() => {
     /** ------way 1---------------*/
 
     /**---------- way 2---------- */
-    github.repos = await getRepositories(github.org);
+    const controller = new AbortController();
+    github.repos = await getRepositories(github.org, controller);
+
+    return () => {
+      controller.abort();
+    };
     /**---------- way 2---------- */
   });
 
