@@ -92,7 +92,7 @@ export default component$(() => {
           {taskList.length ? (
             taskList.map((item) => {
               return (
-                <div class="p-todo__items" key={item.id}>
+                <div class="p-todo__items">
                   <p class="p-todo__items--info">{item.task}</p>
                   <div class="p-todo__items--action">
                     <button
@@ -129,10 +129,7 @@ export default component$(() => {
           {completedTaskList.length ? (
             completedTaskList.map((item) => {
               return (
-                <div
-                  class="p-todo__items p-todo__items--completed"
-                  key={item.id}
-                >
+                <div class="p-todo__items p-todo__items--completed">
                   <p class="p-todo__items--info">{item.task}</p>
                   <div class="p-todo__items--action">
                     <button
