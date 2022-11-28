@@ -1,0 +1,75 @@
+.p-todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__wrapper {
+        display: flex;
+        margin-bottom: 10px;
+
+        &--input {
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1.5px solid rgb(39, 102, 174);
+            width: 250px;
+        }
+
+        &--button {
+            background-color: aquamarine;
+            border-radius: 5px;
+            margin-left: 5px;
+            width: 60px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__details {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 20px;
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(127, 174, 255);
+        width: 330px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+
+        &--completed {
+            background-color: rgb(31, 201, 39);
+        }
+
+        &--action {
+            padding: 0 10px;
+
+            &-remove {
+                cursor: pointer;
+                background-color: red;
+                color: white;
+                border-radius: 5px;
+                border: 1px solid gray;
+                margin-right: 5px;
+            }
+
+            &-complete {
+                cursor: pointer;
+                background-color: greenyellow;
+                color: black;
+                border-radius: 5px;
+                border: 1px solid gray;
+            }
+        }
+
+        &--info {
+            color: yellow;
+            padding-left: 10px;
+        }
+    }
+}

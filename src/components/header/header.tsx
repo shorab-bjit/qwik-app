@@ -22,6 +22,7 @@ export default component$(() => {
     "fetch-data",
     "auto-complete",
     "use-style",
+    "todo-apps",
   ];
 
   return (
