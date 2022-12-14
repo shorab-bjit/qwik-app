@@ -1,3 +1,5 @@
+## Live Project Url: [qwik-app](https://qwik-sohrab.netlify.app/)
+
 # Qwik App ⚡️
 
 - [Qwik Docs](https://qwik.builder.io/)
